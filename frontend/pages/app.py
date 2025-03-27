@@ -2,14 +2,6 @@ import streamlit as st
 import requests
 import json
 import os
-
-def main():
-    st.title("Symptom Checker")
-    st.write("This is the main healthcare AI application.")
-
-if __name__ == "__main__":
-    main()
-
 # API URL (replace with your actual endpoint)
 API_URL = os.getenv("API_URL", "https://healthcare-ai-hs2r.onrender.com/predict")
 
