@@ -53,7 +53,7 @@ st.markdown("---")
 if st.button("🔍 Get Started with Symptom Checker"):
     st.write("Redirecting ...")
     time.sleep(1)
-    st.switch_page("pages /app.py")
+    st.switch_page("pages/app.py")
 
 # Footer
 st.markdown("<p class='footer'>💡 Developed with ❤️ by Shariq</p>", unsafe_allow_html=True)
