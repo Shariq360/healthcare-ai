@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-
+import os
 # Page Configuration
 st.set_page_config(page_title="AI Symptom Checker", page_icon="🩺", layout="centered")
 
@@ -52,7 +52,9 @@ st.markdown("<p class='data-source'>📊 Data Acquired from: <b>DDX Dataset - Ka
 # Redirect to `app.py`
 st.markdown("---")
 if st.button("🔍 Get Started with Symptom Checker"):
-    st.markdown('<meta http-equiv="refresh" content="0; url=/app.py">', unsafe_allow_html=True)
+    st.write("Redirecting ...")
+    time.sleep(2)
+    os.system("streamlit run frontend/app.py")
 
 # Footer
 st.markdown("<p class='footer'>💡 Developed with ❤️ by Shariq</p>", unsafe_allow_html=True)
