@@ -4,15 +4,15 @@ import time
 # Page Configuration
 st.set_page_config(page_title="AI Symptom Checker", page_icon="🩺", layout="centered")
 
-# Custom CSS for styling
+# Custom CSS (Fixed Styling)
 st.markdown(
     """
     <style>
+        .title { font-size: 40px; font-weight: bold; text-align: center; color: #2E3B55; }
         .subheader { font-size: 20px; text-align: center; color: #555; }
         .feature-box { background-color: #f9f9f9; padding: 15px; border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); margin-bottom: 10px; color: #333; }
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); margin-bottom: 10px;color: #333; }
         .data-source { font-size: 16px; text-align: center; color: #888; }
-        .footer { text-align: center; font-size: 14px; margin-top: 20px; color: #777; }
     </style>
     """,
     unsafe_allow_html=True
@@ -24,7 +24,7 @@ st.markdown("<p class='subheader'>A Smart AI-Powered Healthcare Assistant</p>", 
 
 # About the Project with Loading Animation
 with st.spinner("Loading AI-powered insights..."):
-    time.sleep(2)  # Simulate a loading effect
+    time.sleep(2)  # Simulate a delay
 
 st.write("""
 This AI-driven healthcare tool helps assess your symptoms and provides an **instant health risk assessment**.
@@ -49,10 +49,12 @@ for feature in features:
 # Data Source
 st.markdown("<p class='data-source'>📊 Data Acquired from: <b>DDX Dataset - Kaggle: Heart Disease Dataset (David Lapp)</b></p>", unsafe_allow_html=True)
 
-# Redirect to `app.py`
+# CTA Button
 st.markdown("---")
 if st.button("🔍 Get Started with Symptom Checker"):
-    st.markdown('<meta http-equiv="refresh" content="0; url=/app.py">', unsafe_allow_html=True)
+    st.write("Redirecting...")
+    time.sleep(1)
+    st.rerun()
 
 # Footer
-st.markdown("<p class='footer'>💡 Developed with ❤️ by Shariq</p>", unsafe_allow_html=True)
+st.markdown("💡 **Developed with ❤️ by shariq ")
