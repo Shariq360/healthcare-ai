@@ -3,7 +3,7 @@ import requests
 import json
 import os
 # API URL (replace with your actual endpoint)
-API_URL = os.getenv("API_URL", "https://healthcare-ai-hs2r.onrender.com/predict")
+API_URL = os.getenv("API_URL", "https://heart-attack-predictor-c7gt.onrender.com/predict")
 
 # Streamlit UI
 st.title("AI Healthcare Disease Prediction")
